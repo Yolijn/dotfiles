@@ -1,0 +1,20 @@
+GIT_AUTHOR_NAME="Yolijn"
+GIT_AUTHOR_EMAIL="mail@yolijn.com"
+
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+
+git config --global user.name "$GIT_AUTHOR_NAME"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+git config --global pull.default rebase
+git config --global pull.rebase true
+git config --global push.default simple
+git config --global commit.gpgsign true
+
+alias abort="git rebase --abort"
+alias add="git add"
+alias commit="git commit -S -m"
+alias pick="git cherry-pick"
+alias pull="git pull --autostash"
+
+EDITOR="subl -n -w"
